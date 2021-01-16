@@ -1,0 +1,16 @@
+# b: block | r: bot | m: moving block | e: exit | d + number: door | k + (!): key
+Name Maze 2
+Width 12
+Height 12
+ b | b |  b   | b  |  b | b | b | b | b |   b   | b | b
+ b | b |      |    |    | b |   | m |   |       |   | b
+ b | b |      | b  | d3 |   |   | m |   | r, k3 |   | b
+ b | b | m,k1 | b  |    | b |   | m |   |       |   | b
+ b | b |      | b  |  b | b |   | b |   |       |   | b
+ b | b |      | b  |  b | b | b | b | b |   b   | b | b
+ b |   |      | b  |  b | b | b | b | b |   b   | b | b
+ b |   | k2!  | d2 | d1 | e | b | b | b |   b   | b | b
+ b |   |      |    |  b | b | b | b | b |   b   | b | b
+ b | b |  b   | b  |  b | b | b | b | b |   b   | b | b
+ b | b |  b   | b  |  b | b | b | b | b |   b   | b | b
+ b | b |  b   | b  |  b | b | b | b | b |   b   | b | b 

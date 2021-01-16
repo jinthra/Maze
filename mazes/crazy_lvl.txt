@@ -1,0 +1,15 @@
+# b: block | r: bot | m: moving block | e: exit | d + number: door | k + (!): key
+Name Crazy Maze
+Width 9
+Height 11
+ b | b |  b | b |  b |  b | b  | b | b 
+ b |   |    |   |  b |    | m  |   | b 
+ b |   |  b |   | d1 |    |    |   | b  
+ b |   |  m |   |  b |    | k2 | m | b 
+ b |   |    |   | d2 |    |    |   | b 
+ b |   | k3 |   |  b |  m | b  | b | b 
+ b |   |    |   |    |    |    |   | b 
+ b | b |  b |   |    | k1 | r  |   | b 
+ b |   | d3 |   |    |    |    |   | b 
+ b | e |  b | b |  b |  b | b  | b | b 
+ b | b |  b | b |  b |  b | b  | b | b 
