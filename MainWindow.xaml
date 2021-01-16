@@ -5,8 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Maze"
         mc:Ignorable="d"
+        KeyDown="OnKeyDown"
+        Icon="res/exit.png"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Viewbox>
+            <StackPanel Margin="14">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Focusable" Value="False"/>
+                        <Setter Property="Width" Value="60"/>
+                        <Setter Property="Height" Value="14"/>
+                        <Setter Property="Background" Value="#6fc4a9"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontSize" Value="6"/>
+                        <Setter Property="Margin" Value="0,6,0,0"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="5" Background="{TemplateBinding Background}" >
+                                        <ContentPresenter 
+                                            x:Name="contentPresenter" 
+                                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                                            Content="{TemplateBinding Content}" 
+                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            Margin="{TemplateBinding Padding}"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#347e67"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </StackPanel.Resources>
+
+                <Image x:Name="img" Height="25" Margin="0,30"></Image>
+                <Button Click="Play_Click" Margin="0">Jouer</Button>
+                <Button Click="Import_Click">Importer un niveau</Button>
+                <Button Click="Quit_Click">Quitter</Button>
+                <Label x:Name="lblImport" 
+                       Height="10" 
+                       FontSize="4" 
+                       Margin="0,6,0,0" 
+                       Padding="0" 
+                       Foreground="Gray"
+                       HorizontalContentAlignment="Center"/>
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </Window>
